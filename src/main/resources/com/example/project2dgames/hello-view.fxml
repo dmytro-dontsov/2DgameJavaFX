@@ -4,15 +4,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project2dgames.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project2dgames.HelloController">
    <children>
-      <ImageView fx:id="bg1" fitHeight="400.0" fitWidth="710.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bg1" fitHeight="400.0" fitWidth="710.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../imagas/1689585040.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="bg2" fitHeight="400.0" fitWidth="710.0" layoutX="710.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bg2" fitHeight="400.0" fitWidth="710.0" layoutX="710.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../imagas/1689585040.jpg" />
          </image>
