@@ -31,9 +31,9 @@ public class HelloController {
     AnimationTimer timer = new AnimationTimer() {
         @Override
         public void handle(long l) {
-            if (right)
+            if (right && player.getLayoutX() < 150f)
                 player.setLayoutX(player.getLayoutX() + playerSpeed);
-            if (left)
+            if (left && player.getLayoutX() > 25f)
                 player.setLayoutX(player.getLayoutX() - playerSpeed);
         }
     };
