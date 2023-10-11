@@ -3,10 +3,7 @@ package com.example.project2dgames;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.animation.Animation;
-import javafx.animation.Interpolator;
-import javafx.animation.ParallelTransition;
-import javafx.animation.TranslateTransition;
+import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
@@ -26,6 +23,21 @@ public class HelloController {
 
     private ParallelTransition parallelTransition;
 
+    private static boolean right = false;
+    private static boolean left = false;
+
+    private int playerSpeed = 3;
+
+    AnimationTimer timer = new AnimationTimer() {
+        @Override
+        public void handle(long l) {
+            if (right)
+                player.setLayoutX(player.getLayoutX() - playerSpeed);
+            if (left)
+                player.setLayoutX(player.getLayoutX() + playerSpeed);
+        }
+    };
+
     @FXML
     void initialize() {
         TranslateTransition bgOneTransition = new TranslateTransition(Duration.millis(5000), bg1);
@@ -41,6 +53,8 @@ public class HelloController {
         parallelTransition = new ParallelTransition(bgOneTransition, bgTwoTransition);
         parallelTransition.setCycleCount(Animation.INDEFINITE);
         parallelTransition.play();
+
+        timer.start();
     }
 
 }
