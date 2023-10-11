@@ -23,8 +23,8 @@ public class HelloController {
 
     private ParallelTransition parallelTransition;
 
-    private static boolean right = false;
-    private static boolean left = false;
+    public static boolean right = false;
+    public static boolean left = false;
 
     private int playerSpeed = 3;
 
@@ -32,9 +32,9 @@ public class HelloController {
         @Override
         public void handle(long l) {
             if (right)
-                player.setLayoutX(player.getLayoutX() - playerSpeed);
-            if (left)
                 player.setLayoutX(player.getLayoutX() + playerSpeed);
+            if (left)
+                player.setLayoutX(player.getLayoutX() - playerSpeed);
         }
     };
 
