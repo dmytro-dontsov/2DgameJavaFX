@@ -17,6 +17,9 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
 
         scene.setOnKeyPressed(e -> {
+            if (e.getCode() == KeyCode.SPACE && !HelloController.jump)
+                HelloController.jump = true;
+
             if (e.getCode() == KeyCode.A)
                 HelloController.left = true;
 
