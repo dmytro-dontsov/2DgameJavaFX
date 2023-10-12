@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project2dgames.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project2dgames.HelloController">
    <children>
-      <ImageView fx:id="bg1" fitHeight="400.0" fitWidth="710.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bg1" fitHeight="400.0" fitWidth="712.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../imagas/1689585040.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="bg2" fitHeight="400.0" fitWidth="710.0" layoutX="710.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bg2" fitHeight="400.0" fitWidth="712.0" layoutX="710.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../imagas/1689585040.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="player" fitHeight="129.0" fitWidth="135.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="player" fitHeight="139.0" fitWidth="130.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../imagas/1689585042.png" />
          </image>
       </ImageView>
+      <ImageView fx:id="enemy" fitHeight="55.0" fitWidth="54.0" layoutX="751.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagas/JavaFX%20Enemy%20Image.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelPause" focusTraversable="false" layoutX="275.0" layoutY="137.0" text="Pause" visible="false">
+         <font>
+            <Font name="Ani" size="64.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

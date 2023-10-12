@@ -13,7 +13,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 710, 399);
+        Scene scene = new Scene(fxmlLoader.load(), 712, 399);
         stage.setScene(scene);
 
         scene.setOnKeyPressed(e -> {
@@ -33,6 +33,9 @@ public class HelloApplication extends Application {
 
             if (e.getCode() == KeyCode.D)
                 HelloController.right = false;
+
+            if (e.getCode() == KeyCode.ESCAPE)
+                HelloController.isPause = !HelloController.isPause;
         });
 
         stage.show();
