@@ -21,7 +21,7 @@ public class HelloController {
     private ImageView bg1, bg2, player, enemy;
 
     @FXML
-    private Label labelPause;
+    private Label labelPause, labelLose;
 
     private final int BG_WIDTH = 710;
 
@@ -34,7 +34,7 @@ public class HelloController {
 
     public static boolean isPause = false;
 
-    private int playerSpeed = 3, jumpDownSpeed = 4;
+    private int playerSpeed = 3, jumpDownSpeed = 3;
 
     AnimationTimer timer = new AnimationTimer() {
         @Override
@@ -62,9 +62,17 @@ public class HelloController {
             } else if (!isPause && labelPause.isVisible()) {
                 labelPause.setVisible(false);
                 playerSpeed = 3;
-                jumpDownSpeed = 4;
+                jumpDownSpeed = 3;
                 parallelTransition.play();
                 enemyTransition.play();
+            }
+
+            if (player.getBoundsInParent().intersects(enemy.getBoundsInParent())) {
+                labelLose.setVisible(true);
+                playerSpeed = 0;
+                jumpDownSpeed = 0;
+                parallelTransition.pause();
+                enemyTransition.pause();
             }
         }
     };
